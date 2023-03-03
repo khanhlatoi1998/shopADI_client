@@ -52,6 +52,7 @@ const DetailTemplate = () => {
 
     const handleActiveCharacteristic = (e: any, ref: any, cls: any) => {
         const eleInput = ref?.current?.querySelectorAll('label');
+        console.log(eleInput);
         eleInput.forEach((ele: any) => {
             ele.classList.remove(cls);
         })
@@ -108,9 +109,9 @@ const DetailTemplate = () => {
                     .then((res: any) => {
                         setListRalateProduct(res.data);
                     })
-                    .catch((err) => { })
+                    .catch((err: any) => { })
             })
-            .catch((err) => { });
+            .catch((err: any) => { });
     }, []);
 
     return (
@@ -235,9 +236,9 @@ const DetailTemplate = () => {
                                                                     component={InputRadioFiled}
                                                                 />
                                                                 <label
-                                                                    onClick={(e) => handleActiveCharacteristic(e, refSize, 'border-[black]')}
+                                                                    onClick={(e) => handleActiveCharacteristic(e, refSize, 'border-[#000]')}
                                                                     htmlFor={item}
-                                                                    className={`w-[35px] h-[35px] border border-solid border-color_07 ${idx === 0 ? 'border-[black]' : ''} flex items-center justify-center cursor-pointer`}
+                                                                    className={`w-[35px] h-[35px] border border-solid border-color_07 ${idx == 0 ? 'border-[#000]' : ''} flex items-center justify-center cursor-pointer`}
                                                                 >
                                                                     {item.name ?? item}
                                                                 </label>
