@@ -6,7 +6,7 @@ import { DataProductsType, ProductType } from "../contains/type";
 import productApi from '../api/productsApi';
 
 import { useQuery } from "@tanstack/react-query";
-import { useQueryString } from "contains/hook";
+import { useQueryString } from "../contains/hook";
 interface Props {
     title: string;
     dataProducts: Array<ProductType>;
